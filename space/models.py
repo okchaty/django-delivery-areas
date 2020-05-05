@@ -13,6 +13,8 @@ class Space(models.Model):
         "space.Space",
         on_delete=models.SET_NULL,
         related_name="child",
+        null=True,
+        blank=True
     )
 
     class Meta:

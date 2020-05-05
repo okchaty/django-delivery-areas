@@ -4,7 +4,7 @@ from model_utils.models import TimeStampedModel
 
 class AreaTemplate(TimeStampedModel):
     name = models.CharField(max_length=100)
-    space = models.ForeignKey(
+    space = models.OneToOneField(
         "space.Space",
         on_delete=models.CASCADE,
         related_name="geo_templates"
